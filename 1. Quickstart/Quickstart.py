@@ -17,4 +17,5 @@ for more information : https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-
 def hello_world():
     return 'Hello, World!'
 
+app.run(debug=True)
 # our program is Running on http://127.0.0.1:5000/
