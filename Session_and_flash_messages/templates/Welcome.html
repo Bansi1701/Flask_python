@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+{% if 'fn' and 'ln' in session %}
+
+    {{"welcome"+session['fn'] }}
+
+{% endif %}
+
+<br>
+
+</body>
+</html>
