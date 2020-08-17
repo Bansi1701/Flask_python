@@ -46,4 +46,5 @@ def fn3():
         flash('incorrect username or password...')
         return redirect(url_for('fn4'))
 
-app.run ( debug=True,threaded=True)
+if __name__ == '__main__':
+    app.run ( debug=True,threaded=True)
