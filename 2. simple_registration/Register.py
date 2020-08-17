@@ -1,3 +1,10 @@
+""" 
+path of routing:
+
+RegisterForm.html-------------if username and password correct-----> welcome.html
+                        |
+                        ------wrong------> RegisterForm.html with error message.
+"""  
 
 from flask import *
 
@@ -15,11 +22,11 @@ def data():
     un = request.form[ 'un' ]
     pwd = request.form[ 'pwd' ]
 
-    if un == 'admin' and pwd == 'admin':
-        return render_template('welcome.html', fn=fn, ln=ln)
+    if un == 'admin' and pwd == 'admin':            # username and password are static.
+        return render_template('welcome.html', fn=fn, ln=ln)   # pass fn and ln in welcome.html page
     else:
         str = 'your username or password is wrong.....'
-        return render_template('RegisterForm.html', str =str, un=un, pwd=pwd, )
+        return render_template('RegisterForm.html', str =str) # pass str in RegisterForm.html
 
 
 app.run(debug=1)
