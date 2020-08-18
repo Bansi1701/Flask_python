@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<form action="/register_data" method="post">
+<CENTER>
+    <h1><b><u>Register</u></b></h1>
+    <table border="1px">
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="fn" required="required"/></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="ln" required="required"/></td>
+        </tr>
+        <tr>
+            <td>User Name</td>
+            <td><input type="text" name="un" required="required"/></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pwd" required="required"/></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>Male<input type="radio" name="gender" value="male"/>
+                Female<input type="radio" name="gender" value="female"/>
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <select name="city">
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="surat">Surat</option>
+                    <option value="bhuj">Bhuj</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea name="address" rows="5" cols="5" required="required"></textarea></td>
+        </tr>
+        <tr>
+            <td>Hobby</td>
+            <td>
+                Cricket<input type="checkbox" name="hobby" value="cricket"/>
+                Football<input type="checkbox" name="hobby" value="football"/>
+                Reading<input type="checkbox" name="hobby" value="reading" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><input type="submit" value="submit"></center></td>
+        </tr>
+    </table>
+    <a href="Data">Data</a>
+</form>
+</body>
+</html>

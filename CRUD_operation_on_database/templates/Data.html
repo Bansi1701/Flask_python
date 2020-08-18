@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table align="center" border="1px">
+        <tr>
+                {% for key in data[0] %}
+                    <th> {{ key }} </th>
+                {% endfor %}
+                <th>Action</th>
+        </tr>
+
+        {% for dict_item in data %}
+            <tr>
+                {% for value in dict_item.values() %}
+                    <td>{{ value }}</td>
+                {%  endfor %}
+            <td><a href="/delete_data?id= {{ dict_item['id'] }}">delete</a>/<a href="/edit_data?id={{ dict_item['id'] }}">edit</a> </td>
+        {%  endfor%}
+
+    </table>
+
+</body>
+</html>

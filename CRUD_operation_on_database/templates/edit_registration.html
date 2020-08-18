@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<form action="/update_registration" method="post">
+<CENTER>
+    <h1><b><u>Register</u></b></h1>
+    <table border="1px">
+        <input type="hidden" name="id" value="{{ data['id'] }}" />
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="fn" required="required" value="{{ data['firstname'] }}"/></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="ln" required="required" value="{{ data['lastname'] }}"/></td>
+        </tr>
+        <tr>
+            <td>User Name</td>
+            <td><input type="text" name="un" required="required" value="{{ data['username'] }}"/></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pwd" required="required" value="{{ data['password'] }}"/></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>Male<input type="radio" name="gender" value="male" required/>
+
+                Female<input type="radio" name="gender" value="female"/>
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <select name="city">
+                    <option value="ahmedabad" >Ahmedabad</option>
+                    <option value="surat">Surat</option>
+                    <option value="bhuj">Bhuj</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea name="address" rows="5" cols="5" required="required" >{{ data['address'] }}</textarea></td>
+        </tr>
+        <tr>
+            <td>Hobby</td>
+            <td>
+                Cricket<input type="checkbox" name="hobby" value="cricket" />
+                Football<input type="checkbox" name="hobby" value="football"/>
+                Reading<input type="checkbox" name="hobby" value="reading" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><input type="submit" value="submit"></center></td>
+        </tr>
+    </table>
+    <a href="Data">Data</a>
+</CENTER>
+</form>
+</body>
+</html>
