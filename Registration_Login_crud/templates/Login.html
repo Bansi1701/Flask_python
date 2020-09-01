@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/login" method="post">
+    <center >
+        <h1>login</h1>
+
+        <table border="5">
+
+                <td>User Name</td>
+                <td><input type="text" name="un" required="required"/></td>
+                <td><span style="color: red" >
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {{ messages[0] }}
+                            {% endif %}
+                        {% endwith %}
+                </span></td>
+
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd" required="required"/></td>
+                <td><span style="color: red">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {{ messages[1] }}
+                        {% endif %}
+                    {% endwith %}
+                </span></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="submit"/><br><br>
+        <a href="Registration">Registration</a>
+
+    </center>
+</form>
+</body>
+</html>
